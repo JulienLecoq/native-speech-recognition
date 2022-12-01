@@ -51,5 +51,4 @@ export interface NativeSpeechRecognitionPlugin {
      * Resolves with the new permission status after the user has denied/granted the request.
      */
     requestSpeechRecognitionPermission(): Promise<SpeechRecognitionPermissionStatus>
-
 }

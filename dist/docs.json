@@ -1,0 +1,164 @@
+{
+  "api": {
+    "name": "NativeSpeechRecognitionPlugin",
+    "slug": "nativespeechrecognitionplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "hasAudioPermission",
+        "signature": "() => Promise<PermissionBool>",
+        "parameters": [],
+        "returns": "Promise<PermissionBool>",
+        "tags": [],
+        "docs": "Check if the user has granted the record_audio permission.",
+        "complexTypes": [
+          "PermissionBool"
+        ],
+        "slug": "hasaudiopermission"
+      },
+      {
+        "name": "checkAudioPermission",
+        "signature": "() => Promise<AudioPermissionStatus>",
+        "parameters": [],
+        "returns": "Promise<AudioPermissionStatus>",
+        "tags": [],
+        "docs": "Check record_audio permission.",
+        "complexTypes": [
+          "AudioPermissionStatus"
+        ],
+        "slug": "checkaudiopermission"
+      },
+      {
+        "name": "requestAudioPermission",
+        "signature": "() => Promise<AudioPermissionStatus>",
+        "parameters": [],
+        "returns": "Promise<AudioPermissionStatus>",
+        "tags": [],
+        "docs": "Request record_audio permission.\nResolves with the new permission status after the user has denied/granted the request.",
+        "complexTypes": [
+          "AudioPermissionStatus"
+        ],
+        "slug": "requestaudiopermission"
+      },
+      {
+        "name": "hasSpeechRecognitionPermission",
+        "signature": "() => Promise<PermissionBool>",
+        "parameters": [],
+        "returns": "Promise<PermissionBool>",
+        "tags": [],
+        "docs": "Check if the user has granted the speech recognition permission.",
+        "complexTypes": [
+          "PermissionBool"
+        ],
+        "slug": "hasspeechrecognitionpermission"
+      },
+      {
+        "name": "checkSpeechRecognitionPermission",
+        "signature": "() => Promise<SpeechRecognitionPermissionStatus>",
+        "parameters": [],
+        "returns": "Promise<SpeechRecognitionPermissionStatus>",
+        "tags": [],
+        "docs": "Check speech recognition permission.",
+        "complexTypes": [
+          "SpeechRecognitionPermissionStatus"
+        ],
+        "slug": "checkspeechrecognitionpermission"
+      },
+      {
+        "name": "requestSpeechRecognitionPermission",
+        "signature": "() => Promise<SpeechRecognitionPermissionStatus>",
+        "parameters": [],
+        "returns": "Promise<SpeechRecognitionPermissionStatus>",
+        "tags": [],
+        "docs": "Request speech recognition permission.\nResolves with the new permission status after the user has denied/granted the request.",
+        "complexTypes": [
+          "SpeechRecognitionPermissionStatus"
+        ],
+        "slug": "requestspeechrecognitionpermission"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "PermissionBool",
+      "slug": "permissionbool",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "hasPermission",
+          "tags": [],
+          "docs": "Permission state for record_audio alias.",
+          "complexTypes": [],
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "AudioPermissionStatus",
+      "slug": "audiopermissionstatus",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "record_audio",
+          "tags": [],
+          "docs": "Permission state for record_audio alias.",
+          "complexTypes": [
+            "PermissionState"
+          ],
+          "type": "PermissionState"
+        }
+      ]
+    },
+    {
+      "name": "SpeechRecognitionPermissionStatus",
+      "slug": "speechrecognitionpermissionstatus",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "speech_recognition",
+          "tags": [],
+          "docs": "Permission state for Speech recognition.",
+          "complexTypes": [
+            "PermissionState"
+          ],
+          "type": "PermissionState"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [
+    {
+      "name": "PermissionState",
+      "slug": "permissionstate",
+      "docs": "",
+      "types": [
+        {
+          "text": "'prompt'",
+          "complexTypes": []
+        },
+        {
+          "text": "'prompt-with-rationale'",
+          "complexTypes": []
+        },
+        {
+          "text": "'granted'",
+          "complexTypes": []
+        },
+        {
+          "text": "'denied'",
+          "complexTypes": []
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": []
+}

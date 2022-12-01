@@ -2,54 +2,45 @@ export interface PermissionBool {
     /**
      * Permission state for record_audio alias.
      */
-    hasPermission: boolean
+    hasPermission: boolean;
 }
-
 export interface AudioPermissionStatus {
     /**
      * Permission state for record_audio alias.
      */
-    record_audio: PermissionState
+    record_audio: PermissionState;
 }
-
 export interface SpeechRecognitionPermissionStatus {
     /**
      * Permission state for Speech recognition.
      */
-    speech_recognition: PermissionState
+    speech_recognition: PermissionState;
 }
-
 export interface NativeSpeechRecognitionPlugin {
     /**
      * Check if the user has granted the record_audio permission.
      */
-    hasAudioPermission(): Promise<PermissionBool>
-
+    hasAudioPermission(): Promise<PermissionBool>;
     /**
      * Check record_audio permission.
      */
-    checkAudioPermission(): Promise<AudioPermissionStatus>
-
+    checkAudioPermission(): Promise<AudioPermissionStatus>;
     /**
      * Request record_audio permission.
      * Resolves with the new permission status after the user has denied/granted the request.
      */
-    requestAudioPermission(): Promise<AudioPermissionStatus>
-
+    requestAudioPermission(): Promise<AudioPermissionStatus>;
     /**
      * Check if the user has granted the speech recognition permission.
      */
-    hasSpeechRecognitionPermission(): Promise<PermissionBool>
-
+    hasSpeechRecognitionPermission(): Promise<PermissionBool>;
     /**
      * Check speech recognition permission.
      */
-    checkSpeechRecognitionPermission(): Promise<SpeechRecognitionPermissionStatus>
-
+    checkSpeechRecognitionPermission(): Promise<SpeechRecognitionPermissionStatus>;
     /**
      * Request speech recognition permission.
      * Resolves with the new permission status after the user has denied/granted the request.
      */
-    requestSpeechRecognitionPermission(): Promise<SpeechRecognitionPermissionStatus>
-
+    requestSpeechRecognitionPermission(): Promise<SpeechRecognitionPermissionStatus>;
 }

@@ -58,7 +58,10 @@ public class NativeSpeechRecognitionPlugin extends Plugin {
 
     @PluginMethod
     public void hasSpeechRecognitionPermission(PluginCall call) {
-        call.unimplemented("Not implemented on Android.");
+        JSObject response = new JSObject();
+        response.put("hasPermission", true);
+
+        call.resolve(response);
     }
 
     @PluginMethod
